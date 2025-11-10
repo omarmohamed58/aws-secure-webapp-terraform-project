@@ -95,7 +95,6 @@ aws-secure-webapp-terraform-omar/
 
 ## Terraform Backend Configuration
 
-```hcl
 terraform {
   backend "s3" {
     bucket         = "omar-terraform-state"
@@ -108,7 +107,7 @@ terraform {
 
 
 
-Variables Example
+## Variables Example
 
 project_name          = "omar-webapp"
 region                = "us-east-1"
@@ -118,7 +117,7 @@ private_subnets_cidrs = ["10.0.3.0/24", "10.0.4.0/24"]
 instance_type         = "t3.micro"
 key_name              = "omar-key"
 
-Outputs
+## Outputs
 
 | Output           | Description                          |
 | ---------------- | ------------------------------------ |
@@ -130,7 +129,7 @@ Outputs
 | public_alb_dns   | DNS name of public load balancer     |
 | internal_alb_dns | DNS name of internal load balancer   |
 
-Security Model
+## Security Model
 | Layer        | Description                   | Allowed Inbound      |
 | ------------ | ----------------------------- | -------------------- |
 | Public ALB   | Entry point from the internet | 80/443 from all      |
@@ -139,7 +138,7 @@ Security Model
 | Backend EC2  | Application layer             | Internal ALB only    |
 | NAT Gateway  | Outbound updates              | Private subnets only |
 
-Future Enhancements
+## Future Enhancements
 Add Auto Scaling Groups for proxy and backend tiers
 Integrate Route53 for domain-based routing
 Configure CloudWatch for metrics, logging, and alerts
