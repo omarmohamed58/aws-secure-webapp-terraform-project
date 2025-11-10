@@ -64,23 +64,24 @@ aws-secure-webapp-terraform-omar/
 ├── outputs.tf
 ├── terraform.tfvars
 ├── modules/
-│ ├── vpc/
-│ │ ├── main.tf
-│ │ ├── variables.tf
-│ │ └── outputs.tf
-│ ├── subnets/
-│ ├── igw/
-│ ├── nat_gateway/
-│ ├── route_tables/
-│ ├── security_groups/
-│ ├── ec2_proxy/
-│ ├── ec2_backend/
-│ ├── load_balancer_public/
-│ ├── load_balancer_internal/
-│ └── target_groups/
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── subnets/
+│   ├── igw/
+│   ├── nat_gateway/
+│   ├── route_tables/
+│   ├── security_groups/
+│   ├── ec2_proxy/
+│   ├── ec2_backend/
+│   ├── load_balancer_public/
+│   ├── load_balancer_internal/
+│   └── target_groups/
 └── scripts/
-├── setup_proxy.sh
-└── setup_backend.sh
+    ├── setup_proxy.sh
+    └── setup_backend.sh
+
 ---
 
 ## Prerequisites
