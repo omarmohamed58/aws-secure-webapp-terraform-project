@@ -55,32 +55,32 @@ The solution builds a complete AWS environment consisting of:
 ---
 
 ## Project Structure
+              aws-secure-webapp-terraform-omar/
+              ├── main.tf
+              ├── provider.tf
+              ├── backend.tf
+              ├── variables.tf
+              ├── outputs.tf
+              ├── terraform.tfvars
+              ├── modules/
+              │   ├── vpc/
+              │   │   ├── main.tf
+              │   │   ├── variables.tf
+              │   │   └── outputs.tf
+              │   ├── subnets/
+              │   ├── igw/
+              │   ├── nat_gateway/
+              │   ├── route_tables/
+              │   ├── security_groups/
+              │   ├── ec2_proxy/
+              │   ├── ec2_backend/
+              │   ├── load_balancer_public/
+              │   ├── load_balancer_internal/
+              │   └── target_groups/
+              └── scripts/
+                  ├── setup_proxy.sh
+                  └── setup_backend.sh
 
-aws-secure-webapp-terraform-omar/
-├── main.tf
-├── provider.tf
-├── backend.tf
-├── variables.tf
-├── outputs.tf
-├── terraform.tfvars
-├── modules/
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── subnets/
-│   ├── igw/
-│   ├── nat_gateway/
-│   ├── route_tables/
-│   ├── security_groups/
-│   ├── ec2_proxy/
-│   ├── ec2_backend/
-│   ├── load_balancer_public/
-│   ├── load_balancer_internal/
-│   └── target_groups/
-└── scripts/
-    ├── setup_proxy.sh
-    └── setup_backend.sh
 
 ---
 
